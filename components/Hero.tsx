@@ -39,7 +39,7 @@ const Hero = () => {
                            title="Available For Hire"
                            otherClasses= {`mb-10`}
                        />
-                       <h1 className={`uppercase tracking-widest max-w-80 text-xs text-center text-transparent bg-gradient-to-br from-black/40 to-black/80 bg-clip-text dark:text-transparent  `}>
+                       <h1 className={`uppercase tracking-widest max-w-80 text-xs text-center text-transparent bg-gradient-to-br from-white/40 to-white/80 bg-clip-text dark:text-transparent  `}>
                            Dynamic Web Magic with Next.js
                        </h1>
                      
@@ -56,7 +56,7 @@ const Hero = () => {
                            words={`Hi, I'm Jeremy, A Software Developer based in Nigeria`}
                        />
                        
-                           <a href={`about`} >
+                           <a href={`#projects`} >
                                <MagicButton
                                    title="Check Out My Projects"
                                    icon={<FaLocationArrow/>} position={""} otherClasses={""}                               />
