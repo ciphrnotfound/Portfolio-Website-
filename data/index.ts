@@ -112,11 +112,11 @@ export const projects = [
     },
     {
         id: 3,
-        title: "AI Image SaaS - Canva Application",
-        des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-        img: "/p3.svg",
+        title: "Blockcred",
+        des: "Blockcred is a tool for  issueing, verifying and storing digital credentials with tamper-proof proofs on SUI — fast, private and cost efficient.",
+        img: "/blockcred.png",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-        link: "",
+        link: "https://blockcred-frontend-cs5n.vercel.app/",
     },
     {
         id: 4,
