@@ -1,0 +1,43 @@
+Design and build my portfolio website with a Vercel-inspired monochrome aesthetic — strictly black, white, and grays only. The design philosophy is: less is more. Every element must earn its place.
+Background & Atmosphere:
+
+Background color: #080808 — not pure black, a rich off-black with depth
+Add an extremely subtle noise/grain texture over the background (CSS or SVG filter) — just enough to feel tactile, not visible at a glance
+Very faint radial gradient centered at the top: from #111 to #080808 — creates a soft light source without being decorative
+The grain + gradient combo should make the background feel alive without adding any obvious visual elements
+
+Typography:
+
+Display/headings: Geist, ABC Diatype, or Söhne — sharp, geometric, high-contrast
+Body: same family, lighter weight
+Name rendered large (but not oversized) in #ffffff with letter-spacing: -0.02em
+All secondary text in #666 — never pure gray, slightly warm
+
+Unique Signature Details:
+
+A single 1px horizontal rule in #1a1a1a separates each section — barely visible, more felt than seen
+On hover over project titles: text color shifts from #666 to #fff with a 200ms ease — clean, intentional
+A blinking cursor character | after the name on load, disappears after 2 seconds
+Footer has a tiny "Currently available for work" indicator — a 6px circle in #fff with a soft CSS pulse animation, followed by the text in #444
+
+Layout Rules:
+
+Single-column, max-width 660px, centered
+Sections separated by thin lines, not cards or boxes
+Navigation: just text links, no nav bars or hamburger menus
+NO icons unless absolutely necessary
+NO hero images, background textures beyond the grain, or illustrations
+
+Sections (in order):
+
+Name + one-line role description
+Short bio (2–3 sentences max)
+Selected Work — project title, year, one-line description, link
+Experience — company, role, year range
+Contact — just an email link
+
+Micro-interactions:
+
+Page fade-in on load: opacity 0 → 1, 400ms, ease-out
+Underline slides in on link hover
+Everything else is static — no scroll animations, no parallax
