@@ -2,16 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-
 html, body {
   padding: 0;
   margin: 0;
-  background: #111111 !important;
+  background: #0a0a0a;
   color: #ededed;
-  box-shadow: none !important;
-  border: none !important;
-  background-image: none !important;
   font-feature-settings: 'rlig' 1, 'calt' 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -65,7 +60,6 @@ em {
   animation: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -86,4 +80,22 @@ em {
 ::selection {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  
+  .flex-container > div {
+    flex: 1;
+  }
 }

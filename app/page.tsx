@@ -1,147 +1,119 @@
 "use client"
-import Link from "next/link";
 import { Playfair_Display } from "next/font/google";
+import { LayoutGridDemo } from "./components/LayoutGridDemo";
+import { RiTwitterXLine } from "react-icons/ri";
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400"],
+  style: ["italic"],
   variable: "--font-playfair",
 });
 
+import { PremiumBackground } from "./components/PremiumBackground";
+import { MinimalClock } from "./components/MinimalClock";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#111111] max-md:max-w-sm max-w-sm:w-[50%] text-[#ededed]">
-      <div className="max-w-[900px] md:max-w-[900px] max-md:max-w-sm mx-auto px-6 md:px-6 max-md:px-5 pt-[25vh] max-md:pt-[20vh] pb-24 max-md:pb-16 animate-fade-in opacity-0" style={{ animationFillMode: 'forwards' }}>
-        {/* Name */}
-        <h1 className={`text-[15px] max-md:text-[16px] text-[#ededed] mb-14 max-md:mb-10 tracking-normal`}>
+    <main className="min-h-screen text-[#ededed]">
+      {/* Hero */}
+      <div className="max-w-[680px] mx-auto px-6 pt-[12vh] pb-24">
+        <h1 className="text-[15px] text-[#ededed] mb-10 font-normal">
           Shay Jeremy
         </h1>
-        
-        
-        
-        
-        {/* Bio */}
-        <div className="text-[15px] max-w-sm-[60%] max-md:text-[16px] leading-[1.7] max-md:leading-[1.8] mb-10 max-md:mb-8 text-[#999]">
-          <p>
-            <em className={`text-[#ededed] ${playfair.className}`}>Software Engineer.</em> 15 years old. I graduated high school at 13—not to rush through life, but to start building it. I believe in creating software that serves a purpose, solves real problems, and respects the people who use it. Every project is an opportunity to make something that matters.
-          </p>
-        </div>
-        
-        <div className="text-[15px] max-md:text-[16px] leading-[1.7] max-md:leading-[1.8] mb-32 max-md:mb-20 text-[#999]">
-          <p>
-            Currently working at{" "}
-            <a href="https://pxxl.app" target="_blank" rel="noopener noreferrer" className="text-[#ededed] pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors">pxxl space</a>{" "}
-            and{" "}
-            <a href="https://watchup.site" target="_blank" rel="noopener noreferrer" className="text-[#ededed] pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors">Watchup</a>.{" "}
-            Currently working as the CEO of BotHive, focusing on conversational AI and intelligent tools.
-          </p>
-        </div>
-        
-        {/* Three column layout */}
-        <div className="md:grid md:grid-cols-3 mx-auto justify-center max-md:grid-cols-1 gap-x-16 gap-y-16 max-md:gap-y-12 mt-[12vh] max-md:mt-[8vh] mb-24 max-md:mb-16">
-          {/* Building Column */}
-          <div>
-            <h2 className="text-[11px] max-md:text-[12px] uppercase tracking-wider text-[#666] font-medium mb-8 max-md:mb-6">Building</h2>
-            <div>
-              <h3 className="text-[15px] max-md:text-[16px] text-[#ededed] font-normal mb-1 pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">Clara</h3>
-              <p className="text-[14px] max-md:text-[15px] text-[#666] leading-[1.6] max-w-[200px] max-md:max-w-full">
-                Personal AI assistant for managing digital life. Built with Next.js 15 and Bothive.
-              </p>
-            </div>
-            <div className="mt-8">
-              <h3 className="text-[15px] max-md:text-[16px] text-[#ededed] font-normal mb-1 pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">BotHive</h3>
-              <p className="text-[14px] max-md:text-[15px] text-[#666] leading-[1.6] max-w-[200px] max-md:max-w-full">
-                Platform for conversational AI and advanced intelligent tools.
-              </p>
-            </div>
-            <div className="mt-8">
-              <h3 className="text-[15px] max-md:text-[16px] text-[#ededed] font-normal mb-1 pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">Astra</h3>
-              <p className="text-[14px] max-md:text-[15px] text-[#666] leading-[1.6] max-w-[200px] max-md:max-w-full">
-                Conversational CLI for codebase analysis and autonomous refactoring.
-              </p>
-            </div>
-          </div>
-          
-          {/* Experience Column */}
-          <div>
-            <h2 className="text-[11px] max-md:text-[12px] uppercase tracking-wider text-[#666] font-medium mb-8 max-md:mb-6">Experience</h2>
-            <div className="space-y-8">
-              <div>
-                <div className="flex items-center gap-1.5 mb-2">
-                  <a href="https://bothive.cloud" target="_blank" rel="noopener noreferrer" className="text-[15px] text-[#ededed] font-normal pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">BotHive</a>
-                  <span className="text-[#666] text-[11px]">↗</span>
-                </div>
-                <p className="text-[14px] text-[#666] leading-[1.6] max-w-[200px]">
-                  CEO & Software Engineer.
-                </p>
-              </div>
 
-              <div>
-                <div className="flex items-center gap-1.5 mb-2">
-                  <a href="https://watchup.site" target="_blank" rel="noopener noreferrer" className="text-[15px] text-[#ededed] font-normal pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">Watchup</a>
-                  <span className="text-[#666] text-[11px]">↗</span>
-                </div>
-                <p className="text-[14px] text-[#666] leading-[1.6] max-w-[200px]">
-                  Lead Frontend.
-                </p>
-              </div>
-              
-              <div>
-                <div className="flex items-center gap-1.5 mb-2">
-                  <a href="https://pxxl/app" target="_blank" rel="noopener noreferrer" className="text-[15px] text-[#ededed] font-normal pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">pxxl space</a>
-                  <span className="text-[#666] text-[11px]">↗</span>
-                </div>
-                <p className="text-[14px] text-[#666] leading-[1.6] max-w-[200px]">
-                  Frontend Dev.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Writing Column */}
-          <div>
-            <h2 className="text-[11px] max-md:text-[12px] uppercase tracking-wider text-[#666] font-medium mb-8 max-md:mb-6">Writing</h2>
-            <div className="space-y-8">
-              <div>
-                <Link href="/writing/graduating-high-school">
-                  <h3 className="text-[15px] text-[#ededed] font-normal mb-1 pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">Graduating High School at 13</h3>
-                </Link>
-                <p className="text-[14px] text-[#666] leading-[1.6] max-w-[200px]">
-                  How I did it and why.
-                </p>
-              </div>
-              
-              <div>
-                <Link href="/writing/why-i-started-coding">
-                  <h3 className="text-[15px] text-[#ededed] font-normal mb-1 pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">Why I Started Coding</h3>
-                </Link>
-                <p className="text-[14px] text-[#666] leading-[1.6] max-w-[200px]">
-                  The journey to software engineering.
-                </p>
-              </div>
-              
-              <div>
-                <Link href="/writing/building-astra">
-                  <h3 className="text-[15px] text-[#ededed] font-normal mb-1 pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors w-fit">Building Astra</h3>
-                </Link>
-                <p className="text-[14px] text-[#666] leading-[1.6] max-w-[200px]">
-                  Working on my latest CLI project.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="text-[15px] leading-[1.8] mb-6 text-[#999]">
+          <p>
+            <em className={`text-[#ededed] not-italic ${playfair.className}`}>Software Engineer.</em> Building polished software and web experiences.
+          </p>
         </div>
-        
-        {/* Footer */}
-        <footer className="text-center mt-16 max-md:mt-12">
-          <a 
-            href="https://x.com/TheCiphrJay" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#666] text-[13px] max-md:text-[14px] pb-0.5 border-b border-transparent hover:border-[#555] cursor-pointer transition-colors inline-block"
-          >
-            X
-          </a>
+
+        <div className="text-[15px] leading-[1.8] text-[#888]">
+          <p>
+            Currently at pxxl space and Watchup. CEO of BotHive.
+          </p>
+        </div>
+      </div>
+
+      
+
+      {/* Portfolio Grid */}
+      <div className="max-w-[680px] mx-auto px-6 py-24">
+        <LayoutGridDemo />
+      </div>
+
+  
+
+      {/* Now */}
+      <div className="max-w-[680px] mx-auto px-6 py-24">
+        <h2 className="text-[15px] text-[#ededed] font-normal mb-5">Now</h2>
+        <div className="text-[15px] leading-[1.8] text-[#888] space-y-4">
+          <p>
+            Building Clara, a personal AI assistant. Exploring conversational interfaces and intelligent automation.
+          </p>
+          <p>
+            Learning system design and scalable architectures. The more I build, the more I realize there is to learn.
+          </p>
+        </div>
+      </div>
+
+     
+
+      {/* Contact */}
+      <div className="max-w-[680px] mx-auto px-6 py-24">
+        <h2 className="text-[15px] text-[#ededed] font-normal mb-5">Connect</h2>
+        <div className="text-[15px] leading-[1.8] text-[#888]">
+          <p>
+            Reach me at{" "}
+            <a href="https://x.com/TheCiphrJay" target="_blank" rel="noopener noreferrer" className="text-[#ededed] hover:text-[#999] transition-colors">@TheCiphrJay</a>
+            {" "}or{" "}
+            <a href="mailto:shay@example.com" className="text-[#ededed] hover:text-[#999] transition-colors">shay@example.com</a>.
+          </p>
+        </div>
+      </div>
+      
+      <div className="max-w-[680px] mx-auto px-6 py-32">
+        <footer className="border-t border-white/[0.03] pt-12 text-[11px] text-[#555] font-mono tracking-tight">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+            <div className="space-y-4 max-w-[320px]">
+              <div className="flex items-center gap-2 text-[#888]">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-20"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500/60"></span>
+                </span>
+                <span>Available for new projects</span>
+              </div>
+              <p className="leading-relaxed opacity-60">
+                Build things that matter. Ship fast. Stay humble.
+              </p>
+              <p className="opacity-40">© 2026 Shay Jeremy. All systems autonomous.</p>
+            </div>
+
+            <div className="flex flex-col gap-6 items-start md:items-end">
+              <div className="space-y-1 md:text-right">
+                <span className="text-[#333] uppercase text-[9px] font-bold">Local Time</span>
+                <MinimalClock />
+              </div>
+              
+              <div className="flex items-center gap-6">
+                <a
+                  href="https://x.com/TheCiphrJay"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#444] hover:text-[#ededed] transition-all duration-300 transform hover:scale-110"
+                  aria-label="X"
+                >
+                  <RiTwitterXLine size={16} />
+                </a>
+                <a
+                  href="mailto:akinlorinjeremiah.com"
+                  className="text-[#444] hover:text-[#ededed] transition-colors"
+                >
+                  Email
+                </a>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
     </main>
