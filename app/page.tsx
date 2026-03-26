@@ -67,7 +67,7 @@ export default function Home() {
             Reach me at{" "}
             <a href="https://x.com/TheCiphrJay" target="_blank" rel="noopener noreferrer" className="text-[#ededed] hover:text-[#999] transition-colors">@TheCiphrJay</a>
             {" "}or{" "}
-            <a href="mailto:shay@example.com" className="text-[#ededed] hover:text-[#999] transition-colors">shay@example.com</a>.
+            <a href="mailto:shay@example.com" className="text-[#ededed] hover:text-[#999] transition-colors">akinlorinjeremiah@gmail.com</a>.
           </p>
         </div>
       </div>
